@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sudoku</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+  <header>
+    <h1>Sudoku Solver / Simple Generator!</h1>
+  </header>
+  <div id = "playArea">
+      <table id="sudokuInput">
+        <tr class = "row">
+          <td class = "cell"><input type="text"  maxlength="1"></td>
+          <td class = "cell"><input type="text"  maxlength="1"></td>
+          <td class = "cell"><input type="text"  maxlength="1"></td>
+          <td class = "cell"><input type="text"  maxlength="1"></td>
+          <td class = "cell"><input type="text"  maxlength="1"></td>
+          <td class = "cell"><input type="text"  maxlength="1"></td>
+          <td class = "cell"><input type="text"  maxlength="1"></td>
+          <td class = "cell"><input type="text"  maxlength="1"></td>
+          <td class = "cell"><input type="text"  maxlength="1"></td>
+        </tr>
+        <tr class = "row">
+          <td class = "cell"><input type="text"  maxlength="1"></td>
+          <td class = "cell"><input type="text"  maxlength="1"></td>
+          <td class = "cell"><input type="text"  maxlength="1"></td>
+          <td class = "cell"><input type="text"  maxlength="1"></td>
+          <td class = "cell"><input type="text"  maxlength="1"></td>
+          <td class = "cell"><input type="text"  maxlength="1"></td>
+          <td class = "cell"><input type="text"  maxlength="1"></td>
+          <td class = "cell"><input type="text"  maxlength="1"></td>
+          <td class = "cell"><input type="text"  maxlength="1"></td>
+        </tr>
+        <tr class = "row">
+          <td class = "cell"><input type="text"  maxlength="1"></td>
+          <td class = "cell"><input type="text"  maxlength="1"></td>
+          <td class = "cell"><input type="text"  maxlength="1"></td>
+          <td class = "cell"><input type="text"  maxlength="1"></td>
+          <td class = "cell"><input type="text"  maxlength="1"></td>
+          <td class = "cell"><input type="text"  maxlength="1"></td>
+          <td class = "cell"><input type="text"  maxlength="1"></td>
+          <td class = "cell"><input type="text"  maxlength="1"></td>
+          <td class = "cell"><input type="text"  maxlength="1"></td>
+        </tr>
+        <tr class = "row">
+          <td class = "cell"><input type="text"  maxlength="1"></td>
+          <td class = "cell"><input type="text"  maxlength="1"></td>
+          <td class = "cell"><input type="text"  maxlength="1"></td>
+          <td class = "cell"><input type="text"  maxlength="1"></td>
+          <td class = "cell"><input type="text"  maxlength="1"></td>
+          <td class = "cell"><input type="text"  maxlength="1"></td>
+          <td class = "cell"><input type="text"  maxlength="1"></td>
+          <td class = "cell"><input type="text"  maxlength="1"></td>
+          <td class = "cell"><input type="text"  maxlength="1"></td>
+        </tr>
+        <tr class = "row">
+          <td class = "cell"><input type="text"  maxlength="1"></td>
+          <td class = "cell"><input type="text"  maxlength="1"></td>
+          <td class = "cell"><input type="text"  maxlength="1"></td>
+          <td class = "cell"><input type="text"  maxlength="1"></td>
+          <td class = "cell"><input type="text"  maxlength="1"></td>
+          <td class = "cell"><input type="text"  maxlength="1"></td>
+          <td class = "cell"><input type="text"  maxlength="1"></td>
+          <td class = "cell"><input type="text"  maxlength="1"></td>
+          <td class = "cell"><input type="text"  maxlength="1"></td>
+        </tr>
+        <tr class = "row">
+          <td class = "cell"><input type="text"  maxlength="1"></td>
+          <td class = "cell"><input type="text"  maxlength="1"></td>
+          <td class = "cell"><input type="text"  maxlength="1"></td>
+          <td class = "cell"><input type="text"  maxlength="1"></td>
+          <td class = "cell"><input type="text"  maxlength="1"></td>
+          <td class = "cell"><input type="text"  maxlength="1"></td>
+          <td class = "cell"><input type="text"  maxlength="1"></td>
+          <td class = "cell"><input type="text"  maxlength="1"></td>
+          <td class = "cell"><input type="text"  maxlength="1"></td>
+        </tr>
+        <tr class = "row">
+          <td class = "cell"><input type="text"  maxlength="1"></td>
+          <td class = "cell"><input type="text"  maxlength="1"></td>
+          <td class = "cell"><input type="text"  maxlength="1"></td>
+          <td class = "cell"><input type="text"  maxlength="1"></td>
+          <td class = "cell"><input type="text"  maxlength="1"></td>
+          <td class = "cell"><input type="text"  maxlength="1"></td>
+          <td class = "cell"><input type="text"  maxlength="1"></td>
+          <td class = "cell"><input type="text"  maxlength="1"></td>
+          <td class = "cell"><input type="text"  maxlength="1"></td>
+        </tr>
+        <tr class = "row">
+          <td class = "cell"><input type="text"  maxlength="1"></td>
+          <td class = "cell"><input type="text"  maxlength="1"></td>
+          <td class = "cell"><input type="text"  maxlength="1"></td>
+          <td class = "cell"><input type="text"  maxlength="1"></td>
+          <td class = "cell"><input type="text"  maxlength="1"></td>
+          <td class = "cell"><input type="text"  maxlength="1"></td>
+          <td class = "cell"><input type="text"  maxlength="1"></td>
+          <td class = "cell"><input type="text"  maxlength="1"></td>
+          <td class = "cell"><input type="text"  maxlength="1"></td>
+        </tr>
+        <tr class = "row">
+          <td class = "cell"><input type="text"  maxlength="1"></td>
+          <td class = "cell"><input type="text"  maxlength="1"></td>
+          <td class = "cell"><input type="text"  maxlength="1"></td>
+          <td class = "cell"><input type="text"  maxlength="1"></td>
+          <td class = "cell"><input type="text"  maxlength="1"></td>
+          <td class = "cell"><input type="text"  maxlength="1"></td>
+          <td class = "cell"><input type="text"  maxlength="1"></td>
+          <td class = "cell"><input type="text"  maxlength="1"></td>
+          <td class = "cell"><input type="text"  maxlength="1"></td>
+        </tr>
+
+        
+
+      </table>
+
+
+  </div>
+  
+  <div class = "controls">
+      <button id = "btn_solve">Solve</button>
+      <button id = "btn_reset">Reset</button>
+      <button id = "btn_generate">Generate</button>
+
+  </div>
+
+  <script src="./script.js"></script>
+
+</body>
+
+</html>

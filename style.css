@@ -1,0 +1,62 @@
+*{
+  box-sizing: border-box;
+}
+
+body{
+  max-width: 800px;
+  margin: auto;
+}
+
+header{
+  text-align: center;
+}
+
+#playArea{
+  margin:30px auto;
+  border: 1px solid black;
+  width: 450px;
+  height: 450px;
+
+}
+
+/* #playArea input{
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  padding: 0;
+  margin:0;
+} */
+
+table{
+  border-spacing:0;
+}
+
+.controls{
+  width:fit-content;
+  margin:auto;
+}
+
+
+
+.controls button{
+  width: 100px;
+  margin: 0 10px;
+  padding:10px;
+  
+}
+
+.cell{
+  margin:0;
+  padding:0;
+}
+
+.cell input{
+  border-collapse: collapse;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  border: 0.5px solid black;
+
+}
