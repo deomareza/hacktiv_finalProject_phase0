@@ -1,21 +1,36 @@
 *{
   box-sizing: border-box;
+  font-family: 'Quicksand', sans-serif;
 }
 
 body{
-  max-width: 800px;
-  margin: auto;
+  margin:0;
+  background-color: #f6f4e6;
 }
 
 header{
+  width: 100%;
+  height: 150px;
   text-align: center;
+  background-color: #68b0ab;
+}
+
+header h1{
+  position:relative;
+  font-size:3rem;
+  top:50%;
+  transform: translate(0,-50%);
+  color:#ffffff;
+  margin:auto;
 }
 
 #playArea{
-  margin:30px auto;
-  border: 1px solid black;
-  width: 450px;
-  height: 450px;
+  max-width: 800px;
+  margin: 40px auto;
+  /* margin:30px auto; */
+  border: 2px solid black;
+  width: fit-content;
+  height: fit-content;
 
 }
 
@@ -39,10 +54,20 @@ table{
 
 
 .controls button{
-  width: 100px;
+  width: 120px;
   margin: 0 10px;
   padding:10px;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 5px;
+  color: #ffffff;
+  background-color: #68b0ab;
+  transition:ease-in-out 0.2s;
   
+}
+
+button:hover{
+  transform: scale(1.1);
 }
 
 .cell{

@@ -15,7 +15,10 @@ document.getElementById("btn_solve").addEventListener("click", ()=>{
 document.getElementById("btn_reset").addEventListener("click", resetBoard, false);
 document.getElementById("btn_generate").addEventListener("click", generateBoard, false);
 document.getElementById("sudokuInput").addEventListener("click", (event)=>{
+
+  event.target.style.backgroundColor = "#f1f1f1";
   event.target.value = "";
+  checkInput();
 },false)
 
 
@@ -112,10 +115,10 @@ function checkInput(){
 }
 
 
-
 function warningTileColor(xPos, yPos){
   table.rows[yPos].cells[xPos].childNodes[0].style.backgroundColor = "#ff4b5c";
 }
+
 
 function solveBoard(){
  let board = getInput();
