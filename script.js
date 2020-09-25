@@ -33,13 +33,12 @@ document.getElementById("sudokuInput").addEventListener("change",(event)=>{
 
 
 function checkConsole(input){
-
   console.log("it's working! " + input)
 }
 
+
 function colorTile(){
   
-
   for (let y = 0; y < table.rows.length; y++) {
     const row = table.rows[y];
     let rowArr = [];
@@ -59,6 +58,7 @@ function colorTile(){
     }
   }
 }
+
 
 function getInput(){
 
@@ -82,6 +82,7 @@ function getInput(){
   return output
   
 }
+
 
 function checkInput(){
   warning = false;
@@ -110,8 +111,6 @@ function checkInput(){
   if(!warning){
     colorTile();
   }
-
-
 }
 
 
@@ -135,6 +134,7 @@ function solveBoard(){
     }
 }
 
+
 function resetBoard(){
   warning = false;
   colorTile();
@@ -148,15 +148,26 @@ function resetBoard(){
   }  
 }
 
+
 function generateBoard(){
+  
   resetBoard();
   for (let i = 1; i < 10; i++) {
     let xPos = Math.floor(Math.random()*9);
     let yPos = Math.floor(Math.random()*9);
 
-    table.rows[yPos].cells[xPos].childNodes[0].value = i;
-    
+    table.rows[yPos].cells[xPos].childNodes[0].value = i;  
   }
+
+  solveBoard();
+  
+  for (let i = 0; i < 80; i++) {
+    let xPos = Math.floor(Math.random()*9);
+    let yPos = Math.floor(Math.random()*9);
+
+    table.rows[yPos].cells[xPos].childNodes[0].value = "";  
+  }
+
 }
 
 
@@ -183,12 +194,9 @@ function solve(board){
               }
 
               board[yPos][xPos] = 0;
-
           }
       }
-
   }
-
   return false;
 }
 
