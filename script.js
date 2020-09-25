@@ -1,12 +1,20 @@
 let table = document.getElementById("sudokuInput");
 let warning = false;
+let solved = false;
 
 
 document.addEventListener('DOMContentLoaded', colorTile);
 
 document.getElementById("btn_solve").addEventListener("click", ()=>{
   if(!warning){
-    solveBoard();
+    solve(getInput());
+    if(solved){
+      solveBoard();
+      console.log(solved);
+    } else {
+      alert("This combination is unsolve-able. Please try again.");
+    }
+
   } else {
     alert("Please check the numbers.")
   }
@@ -136,6 +144,7 @@ function solveBoard(){
 
 
 function resetBoard(){
+  solved = false;
   warning = false;
   colorTile();
 
@@ -168,6 +177,7 @@ function generateBoard(){
     table.rows[yPos].cells[xPos].childNodes[0].value = "";  
   }
 
+  solved = false;
 }
 
 
@@ -180,7 +190,7 @@ function solve(board){
   let xPos = spot[1];
 
   if (yPos < 0){
-      console.log('solved');
+      solved = true;
       return true;
       
   } else {
@@ -198,6 +208,7 @@ function solve(board){
       }
   }
   return false;
+
 }
 
 function checkOK(board, xPos, yPos, num){
